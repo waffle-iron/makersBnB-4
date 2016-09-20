@@ -22,6 +22,7 @@ describe('page content', function() {
   });
 
   it('should have content Welcome to Express', function(done) {
+    expect(this.browser.text('p')).to.equal('Welcome to Express');
     done();
   });
 });
