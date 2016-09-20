@@ -1,7 +1,7 @@
 process.env.NODE_ENV = 'test';
 
 var chai = require('chai');
-var should = chai.should(); //change to expect?
+var expect = require('chai').expect
 var chaiHttp = require('chai-http');
 var server = require('../app');
 
@@ -14,7 +14,8 @@ describe('page status codes testing', function() {
     chai.request(server)
     .get('/not_a_page')
     .end(function(err, res) {
-        res.should.have.status(404);
+        // res.should.have.status(404);
+        expect.res.to.have.status(404);
       done();
     });
   });
@@ -23,8 +24,12 @@ describe('page status codes testing', function() {
     chai.request(server)
     .get('/')
     .end(function(err, res) {
-        res.should.have.status(200);
+        // res.should.have.status(200);
+        expect.res.to.have.status(200);
       done();
     });
   });
+
+
+
 });
