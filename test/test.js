@@ -15,7 +15,7 @@ describe('page status codes testing', function() {
     .get('/not_a_page')
     .end(function(err, res) {
         // res.should.have.status(404);
-        expect.res.to.have.status(404);
+        expect(res).to.have.status(404);
       done();
     });
   });
@@ -25,7 +25,7 @@ describe('page status codes testing', function() {
     .get('/')
     .end(function(err, res) {
         // res.should.have.status(200);
-        expect.res.to.have.status(200);
+        expect(res).to.have.status(200);
       done();
     });
   });
