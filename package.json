@@ -20,6 +20,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",
-    "mocha": "^3.0.2"
+    "mocha": "^3.0.2",
+    "zombie": "^2.0.0-alpha11"
   }
 }
